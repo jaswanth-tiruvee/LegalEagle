@@ -1,0 +1,28 @@
+# Core RAG Framework
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-community>=0.0.20
+langchain-groq>=0.1.0
+
+# LLM & Embeddings
+openai>=1.12.0  # Keep for potential fallback
+sentence-transformers>=2.2.0  # Free embeddings from HuggingFace
+torch>=2.0.0  # Required for sentence-transformers
+
+# Vector Stores
+pinecone-client>=3.0.0
+faiss-cpu>=1.7.4
+
+# PDF Processing
+pypdf2>=3.0.1
+
+# Web UI
+streamlit>=1.29.0
+
+# Data Processing
+numpy>=1.24.0
+python-dotenv>=1.0.0
+
+# Utilities
+tiktoken>=0.5.0
+
