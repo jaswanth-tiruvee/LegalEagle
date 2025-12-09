@@ -4,10 +4,23 @@ Configuration module for LegalEagle RAG system.
 import os
 from dotenv import load_dotenv
 
+# Load environment variables from .env file
 load_dotenv()
 
 # API Keys
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", os.getenv("OPENAI_API_KEY", ""))  # Support both GROQ_API_KEY and OPENAI_API_KEY
+# Priority: Streamlit Cloud secrets > Environment variables
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+try:
+    import streamlit as st
+    if hasattr(st, 'secrets') and 'GROQ_API_KEY' in st.secrets:
+        GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+except:
+    pass  # Not in Streamlit environment, use env var
+
+# Fallback to OPENAI_API_KEY if GROQ_API_KEY not found
+if not GROQ_API_KEY:
+    GROQ_API_KEY = os.getenv("OPENAI_API_KEY", "")
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")  # Keep for backward compatibility
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "")
 PINECONE_ENVIRONMENT = os.getenv("PINECONE_ENVIRONMENT", "")
