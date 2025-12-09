@@ -2,6 +2,9 @@
 
 A Retrieval-Augmented Generation (RAG) system designed for analyzing legal contracts with **95% citation accuracy**. LegalEagle provides grounded answers from contract documents, eliminating hallucinations common in generic LLMs.
 
+Live App:  https://legaleagle-cagvgw7cv2npgdtathwkxu.streamlit.app/ 
+Try it out :)
+
 ## 🎯 Business Problem
 
 Generic LLMs like ChatGPT often hallucinate (make things up), which is unacceptable in legal contexts. Lawyers need answers that are strictly grounded in the provided contract text. LegalEagle solves this by:
