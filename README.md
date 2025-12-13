@@ -301,6 +301,3 @@ Feel free to submit issues, fork the repository, and create pull requests.
 - **LangChain** for RAG orchestration
 - **FAISS** (Meta) for efficient vector search
 
----
-
-**Built with ❤️ for legal professionals who need accurate, citable contract analysis - 100% FREE!**
